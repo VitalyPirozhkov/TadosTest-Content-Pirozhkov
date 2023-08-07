@@ -1,6 +1,6 @@
 ﻿namespace Domain.Abstractions
 {
-    internal interface IValueObject
+    public interface IValueObject
     {
     }
 }

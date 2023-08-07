@@ -1,6 +1,6 @@
 ﻿namespace Domain.Abstractions
 {
-    internal interface IEntity : IHasId
+    public interface IEntity : IHasId
     {
 
     }

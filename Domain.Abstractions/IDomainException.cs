@@ -1,6 +1,6 @@
 ﻿namespace Domain.Abstractions
 {
-    internal interface IDomainException
+    public interface IDomainException
     {
     }
 }
