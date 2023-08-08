@@ -22,6 +22,7 @@ namespace CitiesBlog.Domain.Entity
         }
 
         public long Id { get; set; }
+
         public string Name { get; init; }
     }
 }

@@ -17,13 +17,16 @@ namespace CitiesBlog.Domain.Entity
             City = city ?? throw new ArgumentNullException(nameof(city));
             Login = login;
         }
+
         public User(long id, string login, City city) : this(login, city)
         {
             Id = id;
         }
 
         public long Id { get; set; }
+
         public string Login { get; init; }
+
         public City City { get; init; }
     }
 }

@@ -16,10 +16,12 @@ namespace CitiesBlog.Domain.Entity
             Country = country ?? throw new ArgumentNullException(nameof(country));
             Name = name;
         }
+
         public City(long id, string name, Country country) : this(name, country)
         {
             Id = id;
         }
+
         public long Id { get; set; }
 
         public string Name { get; init; }
