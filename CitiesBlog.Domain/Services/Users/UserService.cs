@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CitiesBlog.Domain.Services
+namespace CitiesBlog.Domain.Services.Users
 {
-    internal class UserService : IDomainService
+    internal class UserService : IUserService
     {
         public async Task<User> CreateUserAsync(string login, City city)
         {

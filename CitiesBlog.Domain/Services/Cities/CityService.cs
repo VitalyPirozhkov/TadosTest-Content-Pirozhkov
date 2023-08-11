@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CitiesBlog.Domain.Services
+namespace CitiesBlog.Domain.Services.Cities
 {
-    internal class CityService : IDomainService
+    internal class CityService : ICityService
     {
         public async Task<City> CreateCityAsync(string name, Country country)
         {

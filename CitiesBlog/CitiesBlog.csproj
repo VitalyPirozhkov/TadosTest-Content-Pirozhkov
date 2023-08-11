@@ -10,6 +10,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CitiesBlog.Domain\CitiesBlog.Domain.csproj" />
+      <ProjectReference Include="..\Database.Abstractions\Database.Abstractions.csproj" />
+      <ProjectReference Include="..\Database.Sqllite\Database.Sqllite.csproj" />
+      <ProjectReference Include="..\Database.Transactions.Scoped\Database.Transactions.Scoped.csproj" />
+      <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CitiesBlog.Domain.Services
+namespace CitiesBlog.Domain.Services.Contents
 {
     public abstract class ContentService : IDomainService
     {
