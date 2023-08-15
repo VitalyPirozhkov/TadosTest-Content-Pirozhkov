@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Commands.Abstractions\Commands.Abstractions.csproj" />
     <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
+    <ProjectReference Include="..\Queries.Abstractions\Queries.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

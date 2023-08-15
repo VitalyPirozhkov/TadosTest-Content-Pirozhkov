@@ -1,20 +1,35 @@
-﻿using CitiesBlog.Domain.Entity;
+﻿using CitiesBlog.Domain.Commands.Contexts;
+using CitiesBlog.Domain.Entity;
 using CitiesBlog.Domain.Services.Contents;
+using Commands.Abstractions;
 using Domain.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CitiesBlog.Domain.Services.Contents.Videos
 {
     public class VideoService : ContentService, IVideoService
     {
-        public async Task<Video> CreateVideoAsync(string name, User creator, string reference)
+        private readonly IAsyncCommandBuilder _commandBuilder;
+
+
+        public VideoService(IAsyncCommandBuilder commandBuilder)
         {
-            /*logic*/
-            return new Video(name, creator, reference);
+            _commandBuilder = commandBuilder ?? throw new ArgumentNullException(nameof(commandBuilder));
+        }
+
+        public async Task<Video> CreateVideoAsync(string name, User creator, string reference,
+            CancellationToken cancellationToken = default)
+        {
+            Video video = new Video(name, creator, reference);
+
+            await _commandBuilder.ExecuteAsync(new CreateVideoCommandContext(video), cancellationToken);
+
+            return video;
         }
     }
 }

@@ -47,7 +47,7 @@ namespace CitiesBlog.Domain.Entity
 
         public IEnumerable<Rating> Ratings => _ratings.AsEnumerable();
 
-        protected internal void Rate(int value, User user)
+        protected internal Rating Rate(int value, User user)
         {
             if(user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -55,9 +55,11 @@ namespace CitiesBlog.Domain.Entity
             if(value<1||value>5) 
                 throw new ArgumentOutOfRangeException(nameof(value));
 
-            /*Check on twise Rate?*/
+            Rating rating = new Rating(value, user);
 
-            _ratings.Add(new Rating(value, user));
+            _ratings.Add(rating);
+
+            return rating;
         }
     }
 }

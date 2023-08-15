@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CitiesBlog.Domain.Services.Contents.Aritcles
 {
     public interface IArticleService : IDomainService
     {
-        Task<Article> CreateArticleAsync(string name, User creator, string text);
+        Task<Article> CreateArticleAsync(string name, User creator, string text, CancellationToken cancellationToken = default);
     }
 }

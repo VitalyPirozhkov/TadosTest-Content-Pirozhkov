@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Transactions.Scope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Abstractions", "Commands.Abstractions\Commands.Abstractions.csproj", "{E58EF637-FB46-46CF-89A4-15E8E9F344D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.Abstractions", "Queries.Abstractions\Queries.Abstractions.csproj", "{EACDBF58-8B48-4B4D-89B2-02BA31299F3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{E58EF637-FB46-46CF-89A4-15E8E9F344D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E58EF637-FB46-46CF-89A4-15E8E9F344D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E58EF637-FB46-46CF-89A4-15E8E9F344D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{BF9E2351-6B91-45FF-982E-8484493E22BA} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{E58EF637-FB46-46CF-89A4-15E8E9F344D5} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
+		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B80FDA7-DFF5-4D01-9759-26B5E48CE7F3}

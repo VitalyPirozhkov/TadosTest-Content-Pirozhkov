@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CitiesBlog.Domain.Services.Cities
 {
     public interface ICityService: IDomainService
     {
-        Task<City> CreateCityAsync(string name, Country country);
+        Task<City> CreateCityAsync(string name, Country country, CancellationToken cancellationToken = default);
     }
 }
