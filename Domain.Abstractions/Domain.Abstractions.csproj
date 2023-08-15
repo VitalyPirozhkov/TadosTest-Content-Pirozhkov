@@ -4,4 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Macross.Json.Extensions" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="5.0.7" />
+    <PackageReference Include="Tados.Autofac.Extensions.ConfiguredModules" Version="1.0.0" />
+    <PackageReference Include="Tados.Autofac.Extensions.TypedFactories" Version="1.0.1.1" />
+  </ItemGroup>
+
 </Project>

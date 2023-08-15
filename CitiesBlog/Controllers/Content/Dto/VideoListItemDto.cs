@@ -1,6 +1,6 @@
 ﻿namespace CitiesBlog.Controllers.Content.Dto
 {
-    public class VideoDto : ContentDto
+    public class VideoListItemDto : ContentListItemDto
     {
         public string Reference { get; set; }
     }

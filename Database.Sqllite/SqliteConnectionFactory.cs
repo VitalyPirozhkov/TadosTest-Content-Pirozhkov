@@ -9,6 +9,8 @@ namespace Database.Sqllite
 {
     public class SqliteConnectionFactory : IDbConnectionFactory
     {
+        public static readonly string ConnectionStringParameterName = nameof(_connectionString).TrimStart('_');
+
         private readonly string _connectionString;
 
 

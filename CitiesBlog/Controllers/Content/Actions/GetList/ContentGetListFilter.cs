@@ -1,10 +1,11 @@
 ﻿namespace CitiesBlog.Controllers.Content.Actions.GetList
 {
     using Dto;
+    using CitiesBlog.Domain.Enums;
 
     public record ContentGetListFilter
     {
-        public ContentCategory? Category { get; set; }
+        public ContentType Type { get; set; }
 
         public long? UserId { get; set; }
 

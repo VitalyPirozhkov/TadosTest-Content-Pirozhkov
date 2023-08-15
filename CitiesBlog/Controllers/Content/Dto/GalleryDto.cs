@@ -4,8 +4,8 @@
 
     public class GalleryDto : ContentDto
     {
-        public string CoverUrl { get; set; }
+        public string Cover { get; set; }
         
-        public List<string> ImagesUrls { get; set; }
+        public HashSet<string> Images { get; set; }
     }
 }
