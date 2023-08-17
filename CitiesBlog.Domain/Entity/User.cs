@@ -10,6 +10,9 @@ namespace CitiesBlog.Domain.Entity
 {
     public class User: IEntity
     {
+        [Obsolete("Only for reflection", true)]
+        public User() { }
+
         protected internal User(string login, City city) 
         {
             if (string.IsNullOrWhiteSpace(login))

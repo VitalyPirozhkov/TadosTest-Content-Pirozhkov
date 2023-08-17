@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿using Api.Requests.Abstractions;
+using Api.Requests.Hierarchic.Abstractions;
+using Autofac;
 using Tados.Autofac.Extensions.TypedFactories;
 
 namespace CitiesBlog.DI.Autofac.Modules

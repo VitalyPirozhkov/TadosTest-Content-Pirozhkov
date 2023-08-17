@@ -11,6 +11,9 @@ namespace CitiesBlog.Domain.Entity
     {
         private readonly ISet<string> _images = new HashSet<string>();
 
+        [Obsolete("Only for reflection", true)]
+        public Gallery() { }
+
         protected internal Gallery(string name, User creator, string cover, IEnumerable<string> images)
              : base(name, Enums.ContentType.Gallery, creator)
         {

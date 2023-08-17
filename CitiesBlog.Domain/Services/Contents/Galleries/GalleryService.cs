@@ -26,7 +26,8 @@ namespace CitiesBlog.Domain.Services.Contents.Galleries
         {
             Gallery gallery = new Gallery(name, creator, cover, images);
 
-            await _commandBuilder.ExecuteAsync(new CreateGalleryCommandContext(gallery), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateGalleryCommandContext(gallery), cancellationToken);
+            await _commandBuilder.CreateAsync(gallery, cancellationToken);
 
             return gallery;
         }

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.2.1" />
+    <PackageReference Include="NHibernate" Version="5.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Api.Requests.Abstractions\Api.Requests.Abstractions.csproj" />
+    <ProjectReference Include="..\Api.Requests.Hierarchic.Abstractions\Api.Requests.Hierarchic.Abstractions.csproj" />
+    <ProjectReference Include="..\AspNetCore.ApiControllers.Abstractions\AspNetCore.ApiControllers.Abstractions.csproj" />
+    <ProjectReference Include="..\AspNetCore.ApiControllers.Extensions\AspNetCore.ApiControllers.Extensions.csproj" />
+    <ProjectReference Include="..\CitiesBlog.Domain\CitiesBlog.Domain.csproj" />
+    <ProjectReference Include="..\CitiesBlog\CitiesBlog.csproj" />
+    <ProjectReference Include="..\Commands.Abstractions\Commands.Abstractions.csproj" />
+    <ProjectReference Include="..\Common.DataAnnotations.Hierarchy\Common.DataAnnotations.Hierarchy.csproj" />
+    <ProjectReference Include="..\Common.DataAnnotations\Common.DataAnnotations.csproj" />
+    <ProjectReference Include="..\Database.Abstractions\Database.Abstractions.csproj" />
+    <ProjectReference Include="..\Database.Sqllite\Database.Sqllite.csproj" />
+    <ProjectReference Include="..\Database.Transactions.Scoped\Database.Transactions.Scoped.csproj" />
+    <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
+    <ProjectReference Include="..\Json.Converters.Hierarchy\Json.Converters.Hierarchy.csproj" />
+    <ProjectReference Include="..\Linq.AsyncQueryable.Abstractions\Linq.AsyncQueryable.Abstractions.csproj" />
+    <ProjectReference Include="..\Linq.Providers.Abstractions\Linq.Providers.Abstractions.csproj" />
+    <ProjectReference Include="..\Persistence.Transactions.Behaviors\Persistence.Transactions.Behaviors.csproj" />
+    <ProjectReference Include="..\Queries.Abstractions\Queries.Abstractions.csproj" />
+    <ProjectReference Include="..\Repositories.Abstractions\Repositories.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

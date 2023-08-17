@@ -4,6 +4,7 @@ using CitiesBlog.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Json.Converters.Hierarchy;
 
 namespace CitiesBlog
 {

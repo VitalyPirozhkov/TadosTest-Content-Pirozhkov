@@ -14,6 +14,9 @@ namespace CitiesBlog.Domain.Entity
     {
         private readonly ISet<Rating> _ratings = new HashSet<Rating>();
 
+        [Obsolete("Only for reflection", true)]
+        public Content() { }
+
         protected Content(string name, ContentType type, User creator) 
         {
             if(string.IsNullOrWhiteSpace(name))
@@ -55,7 +58,7 @@ namespace CitiesBlog.Domain.Entity
             if(value<1||value>5) 
                 throw new ArgumentOutOfRangeException(nameof(value));
 
-            Rating rating = new Rating(value, user);
+            Rating rating = new Rating(value, user, this);
 
             _ratings.Add(rating);
 

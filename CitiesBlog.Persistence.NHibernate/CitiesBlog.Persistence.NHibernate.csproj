@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.2.1" />
+    <PackageReference Include="NHibernate" Version="5.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CitiesBlog.Domain\CitiesBlog.Domain.csproj" />
+    <ProjectReference Include="..\NHibernate.Infrastructure.AutoMapping\NHibernate.Infrastructure.AutoMapping.csproj" />
+    <ProjectReference Include="..\NHibernate.Infrastructure\NHibernate.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

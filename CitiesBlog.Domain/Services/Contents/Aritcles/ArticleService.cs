@@ -26,7 +26,8 @@ namespace CitiesBlog.Domain.Services.Contents.Aritcles
         {
             Article article = new Article(name, creator, text);
 
-            await _commandBuilder.ExecuteAsync(new CreateArticleCommandContext(article), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateArticleCommandContext(article), cancellationToken);
+            await _commandBuilder.CreateAsync(article, cancellationToken);
 
             return article;
         }

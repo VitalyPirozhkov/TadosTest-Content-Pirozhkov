@@ -9,6 +9,9 @@ namespace CitiesBlog.Domain.Entity
 {
     public class Article : Content
     {
+        [Obsolete("Only for reflection", true)]
+        public Article() { }
+
         protected internal Article(string name, User creator, string text)
             : base(name, Enums.ContentType.Article, creator)
         {

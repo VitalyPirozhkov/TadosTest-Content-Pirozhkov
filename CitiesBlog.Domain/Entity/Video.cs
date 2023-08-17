@@ -9,6 +9,9 @@ namespace CitiesBlog.Domain.Entity
 {
     public class Video : Content
     {
+        [Obsolete("Only for reflection", true)]
+        public Video() { }
+
         protected internal Video(string name, User creator, string reference)
              : base(name, Enums.ContentType.Video, creator)
         {

@@ -27,7 +27,8 @@ namespace CitiesBlog.Domain.Services.Contents.Videos
         {
             Video video = new Video(name, creator, reference);
 
-            await _commandBuilder.ExecuteAsync(new CreateVideoCommandContext(video), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateVideoCommandContext(video), cancellationToken);
+            await _commandBuilder.CreateAsync(video, cancellationToken);
 
             return video;
         }

@@ -31,7 +31,8 @@ namespace CitiesBlog.Domain.Services.Cities
 
             City city = new City(name, country);
 
-            await _commandBuilder.ExecuteAsync(new CreateCityCommandContext(city), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateCityCommandContext(city), cancellationToken);
+            await _commandBuilder.CreateAsync(city, cancellationToken);
 
             return city;
         }

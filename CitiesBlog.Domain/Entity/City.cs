@@ -9,6 +9,9 @@ namespace CitiesBlog.Domain.Entity
 {
     public class City : IEntity
     {
+        [Obsolete("Only for reflection", true)]
+        public City() { }
+
         protected internal City(string name, Country country) 
         {
             if (string.IsNullOrWhiteSpace(name))

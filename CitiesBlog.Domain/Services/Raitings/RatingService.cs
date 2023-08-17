@@ -44,7 +44,8 @@ namespace CitiesBlog.Domain.Services.Raitings
 
             Rating rating = content.Rate(value, user);
 
-            await _commandBuilder.ExecuteAsync(new CreateRatingCommandContext(rating, content), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateRatingCommandContext(rating, content), cancellationToken);
+            await _commandBuilder.CreateAsync(rating, cancellationToken);
         }
 
         private async Task CheckIsUserRateExistAsync(User user, Content content, CancellationToken cancellationToken = default)
