@@ -1,8 +1,11 @@
-﻿namespace CitiesBlog.Controllers.User.Actions.Create
+﻿using Api.Requests.Abstractions;
+using CitiesBlog.Controllers.City.Actions.Create;
+
+namespace CitiesBlog.Controllers.User.Actions.Create
 {
-    public record UserCreateRequest
+    public record UserCreateRequest : IRequest<UserCreateResponse>
     {
-        public string Email { get; set; }
+        public string Login { get; set; }
 
         public long CityId { get; set; }
     }

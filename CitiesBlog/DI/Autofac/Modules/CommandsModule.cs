@@ -3,6 +3,7 @@ using global::Autofac;
 using CitiesBlog.Persistence.ORM;
 using CitiesBlog.Persistence.ORM.Commands;
 using Tados.Autofac.Extensions.TypedFactories;
+using CitiesBlog.Domain.Services.Users;
 
 namespace CitiesBlog.DI.Autofac.Modules
 {

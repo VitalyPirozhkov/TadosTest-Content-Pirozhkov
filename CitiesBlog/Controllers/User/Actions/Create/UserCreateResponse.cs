@@ -1,4 +1,6 @@
-﻿namespace CitiesBlog.Controllers.User.Actions.Create
+﻿using Api.Requests.Abstractions;
+
+namespace CitiesBlog.Controllers.User.Actions.Create
 {
-    public record UserCreateResponse(long Id);
+    public record UserCreateResponse(long Id) : IResponse;
 }

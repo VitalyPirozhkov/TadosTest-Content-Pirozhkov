@@ -1,31 +1,37 @@
-﻿namespace CitiesBlog.Controllers.User
+﻿using Api.Requests.Abstractions;
+using Api.Requests.Hierarchic.Abstractions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Persistence.Transactions.Behaviors;
+using System;
+using System.Threading.Tasks;
+namespace CitiesBlog.Controllers.User
 {
-    using System;
-    using System.Threading.Tasks;
     using Actions.Create;
-    using Actions.Edit;
     using Actions.Get;
     using Actions.GetList;
-    using CitiesBlog.Controllers.User.Actions.Create;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
-
+    using AspnetCore.ApiControllers.Extensions;
 
     [ApiController]
     [Route("api/user")]
-    public class UserController : Controller
+    public class UserController : CitiesBlogApiControllerBase
     {
+        public UserController(IAsyncRequestBuilder asyncRequestBuilder,
+            IAsyncHierarchicRequestBuilder asyncHierarchicRequestBuilder,
+            IExpectCommit commitPerformer)
+            : base(
+                asyncRequestBuilder,
+                asyncHierarchicRequestBuilder,
+                commitPerformer)
+        {
+        }
+
         [HttpPost]
         [Route("create")]
         [ProducesResponseType(typeof(UserCreateResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public Task<IActionResult> Create(UserCreateRequest request) => throw new NotImplementedException();
-
-        [HttpPost]
-        [Route("edit")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public Task<IActionResult> Edit(UserEditRequest request) => throw new NotImplementedException();
+        public Task<IActionResult> Create(UserCreateRequest request) =>
+            this.RequestAsync().For<UserCreateResponse>().With(request);
 
         [HttpPost]
         [Route("get")]

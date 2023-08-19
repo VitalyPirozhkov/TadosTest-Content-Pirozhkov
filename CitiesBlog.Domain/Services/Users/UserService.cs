@@ -31,7 +31,8 @@ namespace CitiesBlog.Domain.Services.Users
 
             User user = new User(login, city);
 
-            await _commandBuilder.ExecuteAsync(new CreateUserCommandContext(user), cancellationToken);
+            //await _commandBuilder.ExecuteAsync(new CreateUserCommandContext(user), cancellationToken);
+            await _commandBuilder.CreateAsync(user, cancellationToken);
 
             return user;
         }
