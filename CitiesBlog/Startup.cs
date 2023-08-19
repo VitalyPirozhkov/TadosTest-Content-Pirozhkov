@@ -55,29 +55,28 @@ namespace CitiesBlog
 
 
 
-        public void ConfigureDevelopment(IApplicationBuilder applicationBuilder, Database database)
+        public void ConfigureDevelopment(IApplicationBuilder applicationBuilder)
         {
             applicationBuilder
                 .UseDeveloperExceptionPage()
                 .UseSwagger();
 
-
-            Configure(applicationBuilder, database);
+            Configure(applicationBuilder);
         }
-
-        public void Configure(IApplicationBuilder applicationBuilder, Database database)
+        public void Configure(IApplicationBuilder applicationBuilder)
         {
-            database.InitAsync().Wait();
-
-
             applicationBuilder
                 .UseStaticFiles()
                 .UseRouting()
                 .UseEndpoints(endpoints =>
                 {
+                    endpoints.MapControllerRoute(
+                        name: "default",
+                        pattern: "{controller=Home}/{action=Index}/{id?}");
+
                     endpoints.MapControllers();
-                    endpoints.MapFallbackToController("Index", "Home");
                 });
         }
+
     }
 }

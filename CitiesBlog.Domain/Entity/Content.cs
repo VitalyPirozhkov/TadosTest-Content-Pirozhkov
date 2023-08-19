@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CitiesBlog.Domain.Entity
 {
-    public abstract class Content : IEntity
+    public class Content : IEntity
     {
         private readonly ISet<Rating> _ratings = new HashSet<Rating>();
 
@@ -40,17 +40,17 @@ namespace CitiesBlog.Domain.Entity
             }
         }
 
-        public long Id { get; set; }
+        public virtual long Id { get; set; }
 
-        public string Name { get; init; }
+        public virtual string Name { get; init; }
 
-        public ContentType Type { get; init; }
+        public virtual ContentType Type { get; init; }
 
-        public User Creator { get; init; }
+        public virtual User Creator { get; init; }
 
-        public IEnumerable<Rating> Ratings => _ratings.AsEnumerable();
+        public virtual IEnumerable<Rating> Ratings => _ratings.AsEnumerable();
 
-        protected internal Rating Rate(int value, User user)
+        protected internal virtual Rating Rate(int value, User user)
         {
             if(user == null)
                 throw new ArgumentNullException(nameof(user));

@@ -25,10 +25,10 @@ namespace CitiesBlog.Domain.Entity
             Id = id;
         }
 
-        public long Id { get; set; }
+        public virtual long Id { get; set; }
 
-        public string Name { get; init; }
+        public virtual string Name { get; init; }
 
-        public Country Country { get; init; }
+        public virtual Country Country { get; init; }
     }
 }

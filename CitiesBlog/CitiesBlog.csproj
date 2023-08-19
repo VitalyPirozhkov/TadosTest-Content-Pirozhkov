@@ -11,9 +11,11 @@
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="FluentNHibernate" Version="3.2.1" />
         <PackageReference Include="Macross.Json.Extensions" Version="3.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.17" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-        <PackageReference Include="NHibernate" Version="5.4.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
         <PackageReference Include="Tados.Autofac.Extensions.ConfiguredModules" Version="1.0.0" />
         <PackageReference Include="Tados.Autofac.Extensions.TypedFactories" Version="1.0.1.1" />
     </ItemGroup>
@@ -24,6 +26,8 @@
       <ProjectReference Include="..\AspNetCore.ApiControllers.Abstractions\AspNetCore.ApiControllers.Abstractions.csproj" />
       <ProjectReference Include="..\AspNetCore.ApiControllers.Extensions\AspNetCore.ApiControllers.Extensions.csproj" />
       <ProjectReference Include="..\CitiesBlog.Domain\CitiesBlog.Domain.csproj" />
+      <ProjectReference Include="..\CitiesBlog.Persistence.NHibernate\CitiesBlog.Persistence.NHibernate.csproj" />
+      <ProjectReference Include="..\CitiesBlog.Persistence.ORM\CitiesBlog.Persistence.ORM.csproj" />
       <ProjectReference Include="..\Commands.Abstractions\Commands.Abstractions.csproj" />
       <ProjectReference Include="..\Common.DataAnnotations.Hierarchy\Common.DataAnnotations.Hierarchy.csproj" />
       <ProjectReference Include="..\Common.DataAnnotations\Common.DataAnnotations.csproj" />
@@ -32,14 +36,13 @@
       <ProjectReference Include="..\Database.Transactions.Scoped\Database.Transactions.Scoped.csproj" />
       <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
       <ProjectReference Include="..\Json.Converters.Hierarchy\Json.Converters.Hierarchy.csproj" />
+      <ProjectReference Include="..\Linq.AsyncQueryable.Abstractions\Linq.AsyncQueryable.Abstractions.csproj" />
+      <ProjectReference Include="..\Linq.Providers.Abstractions\Linq.Providers.Abstractions.csproj" />
+      <ProjectReference Include="..\NHibernate.Infrastructure.AutoMapping\NHibernate.Infrastructure.AutoMapping.csproj" />
+      <ProjectReference Include="..\NHibernate.Infrastructure\NHibernate.Infrastructure.csproj" />
       <ProjectReference Include="..\Persistence.Transactions.Behaviors\Persistence.Transactions.Behaviors.csproj" />
       <ProjectReference Include="..\Queries.Abstractions\Queries.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson">
-        <HintPath>..\..\..\..\.nuget\packages\microsoft.aspnetcore.mvc.newtonsoftjson\5.0.7\lib\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll</HintPath>
-      </Reference>
+      <ProjectReference Include="..\Repositories.Abstractions\Repositories.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

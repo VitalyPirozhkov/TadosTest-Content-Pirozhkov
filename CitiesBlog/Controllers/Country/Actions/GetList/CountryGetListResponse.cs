@@ -1,8 +1,13 @@
 ﻿namespace CitiesBlog.Controllers.Country.Actions.GetList
 {
+    using Api.Requests.Abstractions;
     using Dto;
     using Infrastructure.Pagination;
+    using System.Collections.Generic;
 
+    public record CountryGetListResponse(
 
-    public record CountryGetListResponse(PaginatedList<CountryListItemDto> Page);
+        IEnumerable<CountryListItemDto> Countries
+
+    ) : IResponse;
 }

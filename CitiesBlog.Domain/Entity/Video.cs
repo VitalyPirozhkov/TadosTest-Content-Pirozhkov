@@ -28,6 +28,6 @@ namespace CitiesBlog.Domain.Entity
             Reference = reference;
         }
 
-        public string Reference { get; init; }
+        public virtual string Reference { get; init; }
     }
 }

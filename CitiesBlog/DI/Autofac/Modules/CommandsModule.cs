@@ -1,5 +1,7 @@
-﻿using Autofac;
-using Commands.Abstractions;
+﻿using Commands.Abstractions;
+using global::Autofac;
+using CitiesBlog.Persistence.ORM;
+using CitiesBlog.Persistence.ORM.Commands;
 using Tados.Autofac.Extensions.TypedFactories;
 
 namespace CitiesBlog.DI.Autofac.Modules
@@ -9,7 +11,12 @@ namespace CitiesBlog.DI.Autofac.Modules
         protected override void Load(ContainerBuilder builder)
         {
             builder
-                .RegisterAssemblyTypes(typeof(PersistenceAssemblyMarker).Assembly)
+                .RegisterGeneric(typeof(CreateObjectWithIdCommand<>))
+                .As(typeof(IAsyncCommand<>))
+                .InstancePerDependency();
+
+            builder
+                .RegisterAssemblyTypes(typeof(PersistenceOrmAssemblyMarker).Assembly)
                 .AsClosedTypesOf(typeof(IAsyncCommand<>))
                 .InstancePerDependency();
 

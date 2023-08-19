@@ -1,14 +1,13 @@
 ﻿namespace CitiesBlog.Controllers.Country.Actions.GetList
 {
+    using Api.Requests.Abstractions;
     using CitiesBlog.Controllers.Country.Actions.GetList;
     using Infrastructure.Pagination;
 
 
-    public record CountryGetListRequest
+    public record CountryGetListRequest : IRequest<CountryGetListResponse>
     {
-        // Если объект Pagination не указан, то отдаётся весь список
-        public Pagination Pagination { get; set; }
+        public string Search { get; init; }
 
-        public CountryGetListFilter Filter { get; set; }
     }
 }

@@ -42,8 +42,8 @@ namespace CitiesBlog.Domain.Entity
             }
         }
 
-        public string Cover { get; init; } 
+        public virtual string Cover { get; init; } 
 
-        public IEnumerable<string> Images => _images.AsEnumerable();
+        public virtual IEnumerable<string> Images => _images.AsEnumerable();
     }
 }

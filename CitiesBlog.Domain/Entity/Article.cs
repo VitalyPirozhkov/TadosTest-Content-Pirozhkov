@@ -28,6 +28,6 @@ namespace CitiesBlog.Domain.Entity
             Text = text;
         }
 
-        public string Text { get; init; }
+        public virtual string Text { get; init; }
     }
 }

@@ -5,14 +5,16 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentNHibernate" Version="3.2.1" />
+      <PackageReference Include="NHibernate" Version="5.4.5" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\Linq.AsyncQueryable.Abstractions\Linq.AsyncQueryable.Abstractions.csproj" />
       <ProjectReference Include="..\Linq.Providers.Abstractions\Linq.Providers.Abstractions.csproj" />
       <ProjectReference Include="..\Persistence.Transactions.Behaviors\Persistence.Transactions.Behaviors.csproj" />
       <ProjectReference Include="..\Repositories.Abstractions\Repositories.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="NHibernate" Version="5.3.8" />
     </ItemGroup>
 
 </Project>

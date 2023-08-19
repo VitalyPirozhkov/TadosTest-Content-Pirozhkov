@@ -27,12 +27,12 @@ namespace CitiesBlog.Domain.ValueObjects
             Id = id;
         }
 
-        public long Id { get; set; }
+        public virtual long Id { get; set; }
 
-        public int Value { get; init; }
+        public virtual int Value { get; init; }
 
-        public User User { get; init; }
+        public virtual User User { get; init; }
 
-        public Content Content { get; init; }
+        public virtual Content Content { get; init; }
     }
 }

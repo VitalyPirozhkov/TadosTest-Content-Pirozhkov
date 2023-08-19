@@ -8,7 +8,8 @@ namespace CitiesBlog.Controllers.City.Profiles
     {
         public CityProfile() 
         {
-            CreateMap<Domain.Entity.City, CityDto>();
+            CreateMap<Domain.Entity.City, CityDto>()
+            .ForMember(dest => dest.CountryDto, opt => opt.MapFrom(src => src.Country));
             CreateMap<Domain.Entity.City, CityListItemDto>();
         }
     }
