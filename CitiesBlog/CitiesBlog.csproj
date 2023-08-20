@@ -32,7 +32,6 @@
       <ProjectReference Include="..\Common.DataAnnotations.Hierarchy\Common.DataAnnotations.Hierarchy.csproj" />
       <ProjectReference Include="..\Common.DataAnnotations\Common.DataAnnotations.csproj" />
       <ProjectReference Include="..\Database.Abstractions\Database.Abstractions.csproj" />
-      <ProjectReference Include="..\Database.Sqllite\Database.Sqllite.csproj" />
       <ProjectReference Include="..\Database.Transactions.Scoped\Database.Transactions.Scoped.csproj" />
       <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
       <ProjectReference Include="..\Json.Converters.Hierarchy\Json.Converters.Hierarchy.csproj" />

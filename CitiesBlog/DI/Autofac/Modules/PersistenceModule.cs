@@ -1,7 +1,6 @@
 ﻿using Autofac.Extensions.ConfiguredModules;
 using Autofac;
 using Database.Abstractions;
-using Database.Sqllite;
 using Microsoft.Extensions.Configuration;
 using Tados.Autofac.Extensions.TypedFactories;
 using CitiesBlog.Persistence.NHibernate;

@@ -3,7 +3,6 @@
     using Api.Requests.Abstractions;
     using CitiesBlog.Controllers.User.Dto;
     using Dto;
-    using Infrastructure.Pagination;
     using System.Collections.Generic;
 
     public record ContentGetListResponse(

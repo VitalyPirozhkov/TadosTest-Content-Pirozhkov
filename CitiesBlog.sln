@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Abstractions", "Database.Abstractions\Database.Abstractions.csproj", "{B1388884-5964-4374-A3AD-7BB33EC4BC56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Sqllite", "Database.Sqllite\Database.Sqllite.csproj", "{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Transactions.Scoped", "Database.Transactions.Scoped\Database.Transactions.Scoped.csproj", "{BF9E2351-6B91-45FF-982E-8484493E22BA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commands.Abstractions", "Commands.Abstractions\Commands.Abstractions.csproj", "{E58EF637-FB46-46CF-89A4-15E8E9F344D5}"
@@ -43,9 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq.AsyncQueryable.Abstrac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories.Abstractions", "Repositories.Abstractions\Repositories.Abstractions.csproj", "{F03B51A5-52A4-463F-B95D-C9E3A1284243}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesBlog.Persistence.ORM", "CitiesBlog.Persistence.ORM\CitiesBlog.Persistence.ORM.csproj", "{FC0E5751-C003-4111-938C-B5989DAD9E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CitiesBlog.Persistence.ORM", "CitiesBlog.Persistence.ORM\CitiesBlog.Persistence.ORM.csproj", "{FC0E5751-C003-4111-938C-B5989DAD9E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesBlog.Persistence.NHibernate", "CitiesBlog.Persistence.NHibernate\CitiesBlog.Persistence.NHibernate.csproj", "{DDC20926-FF6D-4ED0-AD7D-F0A199EA7927}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CitiesBlog.Persistence.NHibernate", "CitiesBlog.Persistence.NHibernate\CitiesBlog.Persistence.NHibernate.csproj", "{DDC20926-FF6D-4ED0-AD7D-F0A199EA7927}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHibernate.Infrastructure", "NHibernate.Infrastructure\NHibernate.Infrastructure.csproj", "{477F4375-68F1-4344-8334-52AF34896F27}"
 EndProject
@@ -73,10 +71,6 @@ Global
 		{B1388884-5964-4374-A3AD-7BB33EC4BC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1388884-5964-4374-A3AD-7BB33EC4BC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1388884-5964-4374-A3AD-7BB33EC4BC56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF9E2351-6B91-45FF-982E-8484493E22BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF9E2351-6B91-45FF-982E-8484493E22BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF9E2351-6B91-45FF-982E-8484493E22BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -156,7 +150,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5D79FAAA-AD23-48AC-89BB-E9C8EA51FCC3} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{B1388884-5964-4374-A3AD-7BB33EC4BC56} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
-		{3CE295C0-6E29-4ECF-94B4-9A5A80FA975F} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{BF9E2351-6B91-45FF-982E-8484493E22BA} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{E58EF637-FB46-46CF-89A4-15E8E9F344D5} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
 		{EACDBF58-8B48-4B4D-89B2-02BA31299F3E} = {ECB0D886-1E46-402C-B003-8FD3D9EE8C2E}
