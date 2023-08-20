@@ -9,7 +9,7 @@ namespace CitiesBlog.Domain.Entity
 {
     public class Gallery: Content
     {
-        private readonly ISet<string> _images = new HashSet<string>();
+        private readonly ISet<Images> _images = new HashSet<Images>();
 
         [Obsolete("Only for reflection", true)]
         public Gallery() { }
@@ -24,7 +24,8 @@ namespace CitiesBlog.Domain.Entity
             Cover = cover;
             foreach (var image in images)
             {
-                _images.Add(image);
+                Images objImage = new Images(image);
+                _images.Add(objImage);
             }
         }
 
@@ -38,12 +39,13 @@ namespace CitiesBlog.Domain.Entity
             Cover = cover;
             foreach (var image in images)
             {
-                _images.Add(image);
+                Images objImage = new Images(image);
+                _images.Add(objImage);
             }
         }
 
         public virtual string Cover { get; init; } 
 
-        public virtual IEnumerable<string> Images => _images.AsEnumerable();
+        public virtual IEnumerable<Images> Images => _images.AsEnumerable();
     }
 }

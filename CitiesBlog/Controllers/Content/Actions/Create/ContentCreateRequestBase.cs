@@ -1,6 +1,9 @@
-﻿namespace CitiesBlog.Controllers.Content.Actions.Create
+﻿using Api.Requests.Abstractions;
+using CitiesBlog.Controllers.City.Actions.Create;
+
+namespace CitiesBlog.Controllers.Content.Actions.Create
 {
-    public abstract record ContentCreateRequestBase
+    public abstract record ContentCreateRequestBase : IRequest<ContentCreateResponse>
     {
         public string Name { get; set; }
 

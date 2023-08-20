@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using CitiesBlog.Controllers.Content.Dto;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CitiesBlog.Controllers.Content.Profiles
 {
@@ -17,6 +19,7 @@ namespace CitiesBlog.Controllers.Content.Profiles
             CreateMap<Domain.Entity.Gallery, GalleryListItemDto>();
 
             CreateMap<Domain.Entity.Content, ContentDto>()
+                .ForMember(dest => dest.AverageRating, opt => opt.MapFrom(src => src.Ratings.Any() ? src.Ratings.Average(r => r.Value) : 0))
                 .Include<Domain.Entity.Article, ArticleDto>()
                 .Include<Domain.Entity.Video, VideoDto>()
                 .Include<Domain.Entity.Gallery, GalleryDto>();
@@ -24,6 +27,12 @@ namespace CitiesBlog.Controllers.Content.Profiles
             CreateMap<Domain.Entity.Article, ArticleDto>();
             CreateMap<Domain.Entity.Video, VideoDto>();
             CreateMap<Domain.Entity.Gallery, GalleryDto>();
+
+            CreateMap<IEnumerable<Domain.Entity.Images>, List<string>>()
+                .ConvertUsing((images, urls, context) =>
+                {
+                    return images.Select(image => image.Reference).ToList();
+                });
         }
     }
 }

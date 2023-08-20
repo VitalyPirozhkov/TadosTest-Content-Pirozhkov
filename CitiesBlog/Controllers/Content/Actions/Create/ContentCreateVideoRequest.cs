@@ -1,7 +1,9 @@
-﻿namespace CitiesBlog.Controllers.Content.Actions.Create
+﻿using Api.Requests.Abstractions;
+
+namespace CitiesBlog.Controllers.Content.Actions.Create
 {
-    public record ContentCreateVideoRequest : ContentCreateRequestBase
+    public record ContentCreateVideoRequest : ContentCreateRequestBase, IRequest<ContentCreateResponse>
     {
-        public string Url { get; set; }
+        public string Reference { get; set; }
     }
 }

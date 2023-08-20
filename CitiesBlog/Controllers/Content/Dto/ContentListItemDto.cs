@@ -12,7 +12,6 @@
         public UserListItemDto Creator { get; set; }
 
         public string Name { get; set; }
-        
-        public decimal AverageRating { get; set; }
+
     }
 }

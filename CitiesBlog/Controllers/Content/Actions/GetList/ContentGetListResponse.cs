@@ -1,7 +1,11 @@
 ﻿namespace CitiesBlog.Controllers.Content.Actions.GetList
 {
+    using Api.Requests.Abstractions;
+    using CitiesBlog.Controllers.User.Dto;
     using Dto;
     using Infrastructure.Pagination;
+    using System.Collections.Generic;
 
-    public record ContentGetListResponse(PaginatedList<ContentDto> Page);
+    public record ContentGetListResponse(
+        IEnumerable<ContentListItemDto> Contents) : IResponse;
 }

@@ -1,12 +1,13 @@
 ﻿namespace CitiesBlog.Controllers.Content.Actions.Create
 {
+    using Api.Requests.Abstractions;
     using System.Collections.Generic;
 
 
-    public record ContentCreateGalleryRequest : ContentCreateRequestBase
+    public record ContentCreateGalleryRequest : ContentCreateRequestBase, IRequest<ContentCreateResponse>
     {
-        public string CoverUrl { get; set; }
+        public string Cover { get; set; }
 
-        public List<string> ImagesUrls { get; set; }
+        public List<string> Images { get; set; }
     }
 }

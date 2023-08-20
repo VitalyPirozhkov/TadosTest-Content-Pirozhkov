@@ -1,12 +1,10 @@
-﻿namespace CitiesBlog.Controllers.User.Actions.GetList
-{
-    using Infrastructure.Pagination;
+﻿using Api.Requests.Abstractions;
+using CitiesBlog.Controllers.City.Actions.GetList;
 
-    public record UserGetListRequest
+namespace CitiesBlog.Controllers.User.Actions.GetList
+{
+    public record UserGetListRequest : IRequest<UserGetListResponse>
     {
-        // Если объект Pagination не указан, то отдаётся весь список
-        public Pagination Pagination { get; set; }
-        
-        public UserGetListFilter Filter { get; set; }
+        public string Search { get; init; }
     }
 }

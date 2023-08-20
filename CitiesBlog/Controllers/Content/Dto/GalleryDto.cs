@@ -6,6 +6,6 @@
     {
         public string Cover { get; set; }
         
-        public HashSet<string> Images { get; set; }
+        public List<string> Images { get; set; }
     }
 }

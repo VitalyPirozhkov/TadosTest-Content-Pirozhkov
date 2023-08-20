@@ -37,12 +37,14 @@ namespace CitiesBlog.Controllers.User
         [Route("get")]
         [ProducesResponseType(typeof(UserGetResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public Task<IActionResult> Get(UserGetRequest request) => throw new NotImplementedException();
+        public Task<IActionResult> Get(UserGetRequest request) =>
+            this.RequestAsync().For<UserGetResponse>().With(request);
 
         [HttpPost]
         [Route("getList")]
         [ProducesResponseType(typeof(UserGetListResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public Task<IActionResult> Get(UserGetListRequest request) => throw new NotImplementedException();
+        public Task<IActionResult> Get(UserGetListRequest request) =>
+            this.RequestAsync().For<UserGetListResponse>().With(request);
     }
 }

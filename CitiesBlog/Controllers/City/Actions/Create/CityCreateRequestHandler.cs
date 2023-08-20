@@ -21,9 +21,11 @@ namespace CitiesBlog.Controllers.City.Actions.Create
         public async Task<CityCreateResponse> ExecuteAsync(CityCreateRequest request)
         {
             var country = await _asyncQueryBuilder.FindByIdAsync<Domain.Entity.Country>(request.CountryId);
+
             var city = await _cityService.CreateCityAsync(
                 name: request.Name,
                 country: country);
+
             return new CityCreateResponse(Id: city.Id);
         }
     }

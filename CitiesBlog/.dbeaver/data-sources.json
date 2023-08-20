@@ -1,0 +1,42 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-18a13d4d9f5-c58341bee74dfa0": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "test.db",
+			"save-password": true,
+			"configuration": {
+				"database": "C:\\Users\\vitas\\Desktop\\TadosTest\\TadosTest-Content\\CitiesBlog\\test.db",
+				"url": "jdbc:sqlite:C:\\Users\\vitas\\Desktop\\TadosTest\\TadosTest-Content\\CitiesBlog\\test.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"sqlite_jdbc-18a13d70d0e-479c7911423d69c4": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "test.db 2",
+			"save-password": true,
+			"configuration": {
+				"database": "C:\\Users\\vitas\\Desktop\\TadosTest\\TadosTest-Content\\CitiesBlog\\test.db",
+				"url": "jdbc:sqlite:C:\\Users\\vitas\\Desktop\\TadosTest\\TadosTest-Content\\CitiesBlog\\test.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Разработка",
+			"color": "255,255,255",
+			"description": "База данных для разработки",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
