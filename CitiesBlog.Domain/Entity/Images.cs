@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace CitiesBlog.Domain.Entity
 {
-    public class Images : IEntity
+    public class Image : IEntity
     {
         [Obsolete("Only for reflection", true)]
-        public Images() { }
+        public Image() { }
 
-        protected internal Images(string reference) 
+        protected internal Image(string reference) 
         {
             Reference= reference;
         }
 
-        public Images(long id, string reference)
+        public Image(long id, string reference)
         {
             Id = id;
             Reference = reference;

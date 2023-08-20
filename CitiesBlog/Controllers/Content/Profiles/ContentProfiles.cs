@@ -28,7 +28,7 @@ namespace CitiesBlog.Controllers.Content.Profiles
             CreateMap<Domain.Entity.Video, VideoDto>();
             CreateMap<Domain.Entity.Gallery, GalleryDto>();
 
-            CreateMap<IEnumerable<Domain.Entity.Images>, List<string>>()
+            CreateMap<IEnumerable<Domain.Entity.Image>, List<string>>()
                 .ConvertUsing((images, urls, context) =>
                 {
                     return images.Select(image => image.Reference).ToList();

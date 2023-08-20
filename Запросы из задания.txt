@@ -1,0 +1,25 @@
+Запрос 1:
+SELECT c.id AS ContentId, 
+       COALESCE(AVG(r.Value), 0) AS AverageRating
+FROM content c
+LEFT JOIN raiting r ON c.id = r.ContentId
+GROUP BY c.id
+ORDER BY AverageRating DESC;
+
+Запрос 2:
+SELECT u.login AS Username,
+       u.id AS UserId,
+       COALESCE(AVG(r.Value), 0) AS UserAverageRating
+FROM user u
+LEFT JOIN Content c ON u.id = c.CreatorId
+LEFT JOIN Rating r ON c.id = r.ContentId
+GROUP BY u.id
+ORDER BY UserAverageRating DESC;
+
+Запрос 3:
+SELECT c.id AS ContentId,
+       COALESCE(AVG(r.Value), 0) AS AverageRating
+FROM Content c
+LEFT JOIN Rating r ON c.id = r.ContentId
+WHERE c.type = 2
+GROUP BY c.id;
