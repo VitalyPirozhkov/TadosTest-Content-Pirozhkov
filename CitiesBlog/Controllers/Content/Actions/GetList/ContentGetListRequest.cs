@@ -6,7 +6,7 @@
 
     public record ContentGetListRequest : IRequest<ContentGetListResponse>
     {
-        public ContentType Type { get; set; }
+        public ContentType? Type { get; set; }
 
         public long UserId { get; set; }
 

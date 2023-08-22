@@ -10,7 +10,7 @@ namespace CitiesBlog.Domain.Criteria
 {
     public class FindBySearchAndContentTypeAndCreator : ICriterion
     {
-        public FindBySearchAndContentTypeAndCreator(string search, ContentType contentType, long userId)
+        public FindBySearchAndContentTypeAndCreator(string search, ContentType? contentType, long userId)
         {
             Search = search;
             ContentType = contentType;
